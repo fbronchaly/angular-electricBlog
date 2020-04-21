@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
-import { Observable } from 'rxjs';
-import { HttpClientModule } from '@angular/common/http';
-import { map, delay } from 'rxjs/operators';
-import { AngularFirestore, AngularFirestoreDocument,AngularFirestoreCollection } from '@angular/fire/firestore';
+
 
 import {ArticuloModel} from '../modelos/articulo-model';
 
@@ -17,13 +14,25 @@ import {ArticuloModel} from '../modelos/articulo-model';
 })
 export class PortadaComponent implements OnInit {
 
- 
+ datosArticulos: ArticuloModel;
 
-  constructor(private firestore: AngularFirestore) { 
+  constructor(private fs: FirebaseService) { 
 
   }
 
   ngOnInit() {
+
+    this.fs.leeArticulos().subscribe(data => {
+ 
+      this.datosArticulos = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+         
+        };
+      })
+     
+ 
+    });
     
   }
 
