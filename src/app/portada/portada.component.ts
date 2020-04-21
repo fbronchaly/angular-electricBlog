@@ -17,20 +17,11 @@ import {ArticuloModel} from '../modelos/articulo-model';
 })
 export class PortadaComponent implements OnInit {
 
- private articuloCollection: AngularFirestoreCollection<ArticuloModel>;
-shirts: Observable<ArticuloModel[]>;
+ 
 
   constructor(private firestore: AngularFirestore) { 
 
-    this.articuloCollection = firestore.collection<ArticuloModel>('shirts');
-this.shirts = this.articuloCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as ArticuloModel;
-        const id = a.payload.doc.id;
-        return { id, ...data };
-        console.log (...data);
-      })))
-   }
+  }
 
   ngOnInit() {
     

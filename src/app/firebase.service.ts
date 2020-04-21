@@ -10,21 +10,10 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class FirebaseService {
 
-private articuloCollection: AngularFirestoreCollection<ArticuloModel>;
-shirts: Observable<ArticuloModel[]>;
 
 
-constructor( private firestore: AngularFirestore  ) { 
-this.articuloCollection = firestore.collection<ArticuloModel>('shirts');
-this.shirts = this.articuloCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as ArticuloModel;
-        const id = a.payload.doc.id;
-        return { id, ...data };
-        console.log (data);
-      })))
 
-};
+constructor( private firestore: AngularFirestore  ) {}
 
 datosArticulo;
 
@@ -39,6 +28,15 @@ datosArticulo;
   imagen: value.imagen
 })
   };
+
+  getUsers(){
+  return new Promise<any>((resolve, reject) => {
+    this.firestore.collection('/people').snapshotChanges()
+    .subscribe(snapshots => {
+      resolve(snapshots)
+    })
+  })
+}
 
 
 
