@@ -11,17 +11,36 @@ import {ArticuloModel} from '../modelos/articulo-model';
 export class FormularioComponent implements OnInit {
 
 
-    formulario: FormGroup;
-    datos:ArticuloModel;
+    private datos: FormGroup;
+    //private datos: ArticuloModel;  // Modelo
    
 
 
   constructor(private validator: ValidatorService,
-   private fb:FormBuilder) { }
+   private fb:FormBuilder,
+   private formGroup:FormGroup) {
+      
+    }
 
   ngOnInit() {
+
+    this.datos = this.fb.group({
+      titular  : ['', [ Validators.required]  ],
+      autor: ['', [Validators.required ]],
+      texto  : ['', [ Validators.required] ],
+      imagen : [''],
+
+      })
   }
 
-  guardar(){};
+
+ 
+
+    
+  
+
+  onSubmit(instance){
+ console.log(instance); // just to check if it worked 
+}
 
 }
