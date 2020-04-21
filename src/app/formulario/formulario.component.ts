@@ -11,7 +11,7 @@ import {ArticuloModel} from '../modelos/articulo-model';
 export class FormularioComponent implements OnInit {
 
 
-   formulario: ArticuloModel;
+   formulario;
     //private datos: ArticuloModel;  // Modelo
    
 
