@@ -1,0 +1,72 @@
+<h4>Formularios <small> Reactivos </small></h4>
+<hr>
+<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="guardar()">
+
+  <div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Titular</label>
+      <div class="col">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Titular"
+               formControlName="titular"
+               
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Autor</label>
+      <div class="col">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Autor"
+               formControlName="autor"
+              
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Texto</label>
+    <div class="col">
+
+      <textarea class="form-control"
+             type="text"
+             placeholder="Texto articulo"
+             formControlName="textoArticulo"
+             
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Imagen</label>
+    <div class="col">
+
+      <input class="form-control"
+             type="any"
+             placeholder="Imagen"
+             formControlName="imagen"
+            
+    </div>
+  </div>
+
+</form>
+
+
+
+<hr>
+<pre>
+  Estado del formulario: {{ formulario.valid }}
+  <br>
+  Status: {{ formulario.status }}
+</pre>
+
+<pre>
+
+  {{ formulario.value | json }}
+
+</pre>
