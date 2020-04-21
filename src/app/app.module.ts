@@ -13,6 +13,7 @@ import { ValidatorService } from './validator.service';
 import { HomeComponent } from './home/home.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FirebaseService } from './firebase.service';
+import { PortadaComponent } from './portada/portada.component';
 
 @NgModule({
   imports:      [ 
@@ -23,7 +24,7 @@ import { FirebaseService } from './firebase.service';
   ReactiveFormsModule,  
   AngularFireModule.initializeApp(environment.firebase)
  	],
-  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent ],
+  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ValidatorService, FirebaseService]
 })

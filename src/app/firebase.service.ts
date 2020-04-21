@@ -10,6 +10,8 @@ export class FirebaseService {
 
 constructor( private firestore: AngularFirestore  ) { }
 
+datosArticulo;
+
 
   createUser(value){
   return this.firestore.collection('articulos').add({
@@ -21,5 +23,15 @@ constructor( private firestore: AngularFirestore  ) { }
   imagen: value.imagen
 })
   };
-  
+
+
+  getUsers(){
+  return new Promise<any>((resolve, reject) => {
+    this.datosArticulo.collection('/id').snapshotChanges()
+    .subscribe(snapshots => {
+      resolve(snapshots)
+    })
+  })
+}
+
 }
