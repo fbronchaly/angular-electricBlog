@@ -2,7 +2,7 @@ export interface ArticuloModel {
   id: Date;
   titular: String;
   autor: String;
-  texto: String;
+  textoArticulo: String;
   imagen: any;
 
 }
