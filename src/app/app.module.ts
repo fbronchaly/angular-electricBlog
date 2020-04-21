@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ValidatorService } from './validator.service';
 import { HomeComponent } from './home/home.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
 
 @NgModule({
   imports:      [ 
@@ -21,7 +22,7 @@ import { HomeComponent } from './home/home.component';
   ReactiveFormsModule,  
   AngularFireModule.initializeApp(environment.firebase)
  	],
-  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent ],
+  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ValidatorService]
 })
