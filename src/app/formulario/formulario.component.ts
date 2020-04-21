@@ -11,27 +11,35 @@ import {ArticuloModel} from '../modelos/articulo-model';
 export class FormularioComponent implements OnInit {
 
 
-    private datos: FormGroup;
+   formulario: any;
     //private datos: ArticuloModel;  // Modelo
    
 
 
   constructor(private validator: ValidatorService,
-   private fb:FormBuilder,
-   private formGroup:FormGroup) {
-      
+   private fb:FormBuilder
+) {
+      this.crearFormulario();
     }
 
   ngOnInit() {
+ }
 
-    this.datos = this.fb.group({
-      titular  : ['', [ Validators.required]  ],
+
+  crearFormulario() {
+      this.formulario = this.fb.group({
+      titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
-      texto  : ['', [ Validators.required] ],
-      imagen : [''],
+      textoArticulo: ['', [ Validators.required] ],
+      imagen: [''],
 
       })
+
   }
+
+
+
+ 
 
 
  

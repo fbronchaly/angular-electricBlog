@@ -1,6 +1,6 @@
 <h4>Formularios <small> Reactivos </small></h4>
 <hr>
-<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
 
   <div>
 
@@ -12,6 +12,7 @@
                type="text"
                placeholder="Titular"
                formControlName="titular"
+        >
                
       </div>
     </div>
@@ -24,6 +25,7 @@
                type="text"
                placeholder="Autor"
                formControlName="autor"
+        >
               
       </div>
     </div>
@@ -37,7 +39,9 @@
       <textarea class="form-control"
              type="text"
              placeholder="Texto articulo"
-             formControlName="textoArticulo"
+             formControlName="textoArticulo"></textarea>
+
+      
              
     </div>
   </div>
@@ -49,7 +53,7 @@
       <input class="form-control"
              type="any"
              placeholder="Imagen"
-             formControlName="imagen"
+             formControlName="imagen">
             
     </div>
   </div>
