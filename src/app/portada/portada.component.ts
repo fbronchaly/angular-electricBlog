@@ -27,7 +27,11 @@ export class PortadaComponent implements OnInit {
       this.datosArticulos = data.map(e => {
         return {
           id: e.payload.doc.id,
-          
+        titular: e.payload.doc.data()['titular'],
+        autor: e.payload.doc.data()['autor'],
+        textoArticulo:e.payload.doc.data()['textoArticulo'],
+        imagen: e.payload.doc.data()['imagen'],
+
          
         };
       })
