@@ -1,14 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, delay } from 'rxjs/operators';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument,AngularFirestoreCollection } from '@angular/fire/firestore';
+import {ArticuloModel} from './modelos/articulo-model';
+
 import { Observable } from 'rxjs';
+
 
 @Injectable()
 export class FirebaseService {
 
+private articuloCollection: AngularFirestoreCollection<ArticuloModel>;
+shirts: Observable<ArticuloModel[]>;
 
-constructor( private firestore: AngularFirestore  ) { }
+
+constructor( private firestore: AngularFirestore  ) { 
+this.articuloCollection = firestore.collection<ArticuloModel>('shirts');
+this.shirts = this.articuloCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as ArticuloModel;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+        console.log (data);
+      })))
+
+};
 
 datosArticulo;
 
@@ -25,13 +41,8 @@ datosArticulo;
   };
 
 
-  getUsers(){
-  return new Promise<any>((resolve, reject) => {
-    this.datosArticulo.collection('/id').snapshotChanges()
-    .subscribe(snapshots => {
-      resolve(snapshots)
-    })
-  })
-}
+
+
+
 
 }

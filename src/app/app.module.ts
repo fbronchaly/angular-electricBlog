@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FirebaseService } from './firebase.service';
 import { PortadaComponent } from './portada/portada.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports:      [ 
@@ -22,7 +23,8 @@ import { PortadaComponent } from './portada/portada.component';
   NgbModule,
   AngularFirestoreModule,
   ReactiveFormsModule,  
-  AngularFireModule.initializeApp(environment.firebase)
+  AngularFireModule.initializeApp(environment.firebase),
+  HttpClientModule
  	],
   declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent ],
   bootstrap:    [ AppComponent ],
