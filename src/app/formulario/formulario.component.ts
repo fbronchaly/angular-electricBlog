@@ -1,7 +1,16 @@
+// Modulos
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import {Router} from "@angular/router";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+//Servicios
+import {FirebaseService} from '../firebase.service';
 import { ValidatorService } from '../validator.service';
+
+//Modelo
 import {ArticuloModel} from '../modelos/articulo-model';
+
 
 @Component({
   selector: 'app-formulario',
@@ -13,11 +22,15 @@ export class FormularioComponent implements OnInit {
 
    formulario;
     //private datos: ArticuloModel;  // Modelo
+ dataId = new Date();
+ id = this.dataId.getTime();
    
 
 
-  constructor(private validator: ValidatorService,
-   private fb:FormBuilder
+  constructor(
+  private validator: ValidatorService,
+  private fb:FormBuilder,
+  private firebaseService: FirebaseService
 ) {
       this.crearFormulario();
     }
@@ -27,8 +40,10 @@ export class FormularioComponent implements OnInit {
 
 
   crearFormulario() {
+
+
       this.formulario = this.fb.group({
-        id:'',
+        id: this.id,
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],
@@ -50,6 +65,14 @@ export class FormularioComponent implements OnInit {
 
   onSubmit(instance){
  console.log(instance); // just to check if it worked 
+
+ this.firebaseService.createUser(instance)
+	.then(
+	  res => {
+	   console.log ('Datos envidados');
+	   
+	  }
+	)
 }
 
 }

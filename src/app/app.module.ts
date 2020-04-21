@@ -12,6 +12,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { ValidatorService } from './validator.service';
 import { HomeComponent } from './home/home.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
+import { FirebaseService } from './firebase.service';
 
 @NgModule({
   imports:      [ 
@@ -24,6 +25,6 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
  	],
   declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ValidatorService]
+  providers: [ValidatorService, FirebaseService]
 })
 export class AppModule { }
