@@ -11,7 +11,7 @@ import {ArticuloModel} from '../modelos/articulo-model';
 export class FormularioComponent implements OnInit {
 
 
-   formulario: any;
+   formulario: ArticuloModel;
     //private datos: ArticuloModel;  // Modelo
    
 
@@ -28,6 +28,7 @@ export class FormularioComponent implements OnInit {
 
   crearFormulario() {
       this.formulario = this.fb.group({
+        id:'',
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],

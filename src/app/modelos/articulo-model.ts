@@ -1,8 +1,8 @@
 export interface ArticuloModel {
   id: Date;
-  Titular: String;
-  Autor: String;
-  Texto: String;
-  Imagen: any;
+  titular: String;
+  autor: String;
+  texto: String;
+  imagen: any;
 
 }
