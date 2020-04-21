@@ -14,7 +14,7 @@ import {ArticuloModel} from '../modelos/articulo-model';
 })
 export class PortadaComponent implements OnInit {
 
- datosArticulos: ArticuloModel;
+ datosArticulos: any;
 
   constructor(private fs: FirebaseService) { 
 
@@ -27,10 +27,11 @@ export class PortadaComponent implements OnInit {
       this.datosArticulos = data.map(e => {
         return {
           id: e.payload.doc.id,
+          
          
         };
       })
-     
+     console.log(this.datosArticulos);
  
     });
     
