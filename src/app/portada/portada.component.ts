@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
-import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 
 
 import {ArticuloModel} from '../modelos/articulo-model';
@@ -15,11 +15,11 @@ import {ArticuloModel} from '../modelos/articulo-model';
 })
 export class PortadaComponent implements OnInit {
 
- datosArticulos:any;
+ datosArticulos:ArticuloModel[]=[];
  
 
 
-  constructor(private fs: FirebaseService, private router: Router) { 
+  constructor(private fs: FirebaseService) { 
 
   }
 
@@ -32,6 +32,7 @@ export class PortadaComponent implements OnInit {
         const data = e.payload.doc.data() as ArticuloModel
       return {
         id: e.payload.doc.id,
+        numeroOrden:e.payload.doc.data()['numeroOrden'],
         titular: e.payload.doc.data()['titular'],
         autor: e.payload.doc.data()['autor'],
         textoArticulo:e.payload.doc.data()['textoArticulo'],

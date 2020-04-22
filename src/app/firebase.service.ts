@@ -16,12 +16,13 @@ export class FirebaseService {
 constructor( private firestore: AngularFirestore  ) {}
 
 datosArticulo;
+numeroOrden = 3;
 
 
   createUser(value){
   return this.firestore.collection('articulos').add({
 
-    id: value.id,
+  numeroOrden: value.this.numeroOrden,
   titular: value.titular,
   autor: value.autor,
   textoArticulo: value.textoArticulo,

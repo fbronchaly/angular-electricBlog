@@ -1,5 +1,5 @@
 export interface ArticuloModel {
-  id: String;
+  numeroOrden: Number;
   titular: String;
   autor: String;
   textoArticulo: String;

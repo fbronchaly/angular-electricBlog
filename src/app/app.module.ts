@@ -5,6 +5,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from './environments/environment';
 
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,6 +27,7 @@ import { ArticuloTarjetaComponent } from './articulo-tarjeta/articulo-tarjeta.co
   ReactiveFormsModule,  
   AngularFireModule.initializeApp(environment.firebase),
   HttpClientModule
+
  	],
   declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent ],
   bootstrap:    [ AppComponent ],
