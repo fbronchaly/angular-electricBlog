@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
+import { Router } from '@angular/router';
 
 
 import {ArticuloModel} from '../modelos/articulo-model';
@@ -18,7 +19,7 @@ export class PortadaComponent implements OnInit {
  
 
 
-  constructor(private fs: FirebaseService) { 
+  constructor(private fs: FirebaseService, private router: Router) { 
 
   }
 
@@ -45,7 +46,9 @@ export class PortadaComponent implements OnInit {
     
   }
 
-
+verArticulo( idx:number ){
+    this.router.navigate( ['/heroe',idx] );
+  }
   
 
 }

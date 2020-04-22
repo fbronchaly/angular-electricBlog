@@ -5,3 +5,16 @@
         {{ shirt.autor }}
       </li>
     </ul>
+
+
+    <h1>Articulos <small>Blog Daños eléctricos</small></h1>
+<hr>
+
+
+<div class="card-columns">
+
+<!-- *ngFor="let heroe of heroes; let i = index" -->
+  <app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="foo" [index]="i"  *ngFor="let foo of heroes; let i = index"></app-heroe-tarjeta>
+
+
+</div>
