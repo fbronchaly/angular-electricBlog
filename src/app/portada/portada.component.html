@@ -1,7 +1,7 @@
 
 <a> Datos </a>
 <ul>
-      <li *ngFor="let shirt of shirts | async">
-        {{ shirt.name }} is {{ ArticuloModel.id }}
+      <li *ngFor="let shirt of items | async">
+        {{ shirt.id }}
       </li>
     </ul>

@@ -27,12 +27,11 @@ export class PortadaComponent implements OnInit {
       this.datosArticulos = data.map(e => {
         const data = e.payload.doc.data() as ArticuloModel
         return {
-          /*id: e.payload.doc.id,
+          id: e.payload.doc.id,
         titular: e.payload.doc.data()['titular'],
         autor: e.payload.doc.data()['autor'],
         textoArticulo:e.payload.doc.data()['textoArticulo'],
-        imagen: e.payload.doc.data()['imagen'],*/
-        data
+        imagen: e.payload.doc.data()['imagen'],
 
          
         };
