@@ -23,7 +23,7 @@ export class FormularioComponent implements OnInit {
    formulario;
     //private datos: ArticuloModel;  // Modelo
  dateId = new Date();
- id3 = this.dataId.getTime();
+
 
    
 
