@@ -15,7 +15,7 @@ import {ArticuloModel} from '../modelos/articulo-model';
 })
 export class PortadaComponent implements OnInit {
 
- datosArticulos: ArticuloModel[]= [];
+ datosArticulos:any;
  
 
 
@@ -46,9 +46,7 @@ export class PortadaComponent implements OnInit {
     
   }
 
-verArticulo( idx:number ){
-    this.router.navigate( ['/heroe',idx] );
-  }
+
   
 
 }
