@@ -15,6 +15,7 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FirebaseService } from './firebase.service';
 import { PortadaComponent } from './portada/portada.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticuloTarjetaComponent } from './articulo-tarjeta/articulo-tarjeta.component';
 
 @NgModule({
   imports:      [ 
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
   AngularFireModule.initializeApp(environment.firebase),
   HttpClientModule
  	],
-  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent ],
+  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ValidatorService, FirebaseService]
 })

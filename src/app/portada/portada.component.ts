@@ -14,7 +14,8 @@ import {ArticuloModel} from '../modelos/articulo-model';
 })
 export class PortadaComponent implements OnInit {
 
- datosArticulos: any;
+ datosArticulos: ArticuloModel[]= [];
+ 
 
 
   constructor(private fs: FirebaseService) { 
