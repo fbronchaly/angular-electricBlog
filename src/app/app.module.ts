@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from './environments/environment';
+import { APP_ROUTING } from './app.routes';
+import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +19,8 @@ import { FirebaseService } from './firebase.service';
 import { PortadaComponent } from './portada/portada.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticuloTarjetaComponent } from './articulo-tarjeta/articulo-tarjeta.component';
+import {NavbarComponent} from './shared/navbar/navbar.component';
+
 
 @NgModule({
   imports:      [ 
@@ -26,10 +30,13 @@ import { ArticuloTarjetaComponent } from './articulo-tarjeta/articulo-tarjeta.co
   AngularFirestoreModule,
   ReactiveFormsModule,  
   AngularFireModule.initializeApp(environment.firebase),
-  HttpClientModule
+  HttpClientModule,
+  APP_ROUTING,
+  RouterModule
+
 
  	],
-  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent ],
+  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent, NavbarComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ValidatorService, FirebaseService]
 })
