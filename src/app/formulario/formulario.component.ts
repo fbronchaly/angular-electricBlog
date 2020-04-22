@@ -48,7 +48,7 @@ export class FormularioComponent implements OnInit {
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],
-      imagen: [''],
+      imagen: File [''],
 
       })
 

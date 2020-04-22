@@ -49,12 +49,17 @@
   <div class="form-group row">
     <label class="col-2 col-form-label">Imagen</label>
     <div class="col">
-
-      <input class="form-control"
-             type="any"
-             placeholder="Imagen"
-             formControlName="imagen">
-            
+  
+ <input type="file"
+ id="file"
+ #userPhoto
+ (change)="onFileSelected($event)"
+ name="image"
+ accept=".png,.jpg"
+ autocomplete="off"
+ formControlName="imagen"
+ />
+        
     </div>
   </div>
 
