@@ -42,7 +42,7 @@ export class PortadaComponent implements OnInit {
          
        
       })
-    //console.log (this.datosArticulos);
+    console.log (this.datosArticulos.length);
     });
     
   }
