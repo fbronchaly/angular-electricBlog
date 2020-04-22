@@ -32,7 +32,7 @@ export class PortadaComponent implements OnInit {
         const data = e.payload.doc.data() as ArticuloModel
       return {
         id: e.payload.doc.id,
-        numeroOrden:e.payload.doc.data()['numeroOrden'],
+        fecha :e.payload.doc.data()['fecha'],
         titular: e.payload.doc.data()['titular'],
         autor: e.payload.doc.data()['autor'],
         textoArticulo:e.payload.doc.data()['textoArticulo'],

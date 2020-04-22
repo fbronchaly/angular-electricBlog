@@ -21,7 +21,7 @@ datosArticulo;
 
   createUser(value){
   return this.firestore.collection('articulos').add({
-
+  fecha: value.fecha,
   titular: value.titular,
   autor: value.autor,
   textoArticulo: value.textoArticulo,

@@ -22,7 +22,7 @@ export class FormularioComponent implements OnInit {
 
    formulario;
     //private datos: ArticuloModel;  // Modelo
- dataId = new Date();
+ dateId = new Date();
  id3 = this.dataId.getTime();
 
    
@@ -44,6 +44,7 @@ export class FormularioComponent implements OnInit {
 
 
       this.formulario = this.fb.group({
+      fecha: this.dateId,
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],
@@ -59,7 +60,7 @@ export class FormularioComponent implements OnInit {
 
 
   onSubmit(instance){
- console.log(instance); // just to check if it worked 
+ //console.log(instance); // just to check if it worked 
  
 
  this.firebaseService.createUser(instance)
