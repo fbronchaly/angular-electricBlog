@@ -23,7 +23,8 @@ export class FormularioComponent implements OnInit {
    formulario;
     //private datos: ArticuloModel;  // Modelo
  dataId = new Date();
- id = this.dataId.getTime();
+ id3 = this.dataId.getTime();
+ numeroOrden = 3;
    
 
 
@@ -43,7 +44,7 @@ export class FormularioComponent implements OnInit {
 
 
       this.formulario = this.fb.group({
-        id: this.id,
+      numeroOrden: [this.numeroOrden],
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],
