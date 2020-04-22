@@ -36,11 +36,10 @@ export class PortadaComponent implements OnInit {
         imagen: e.payload.doc.data()['imagen'],
        
         };
-         console.log (this.datosArticulos)
+         
        
       })
-    
- 
+    console.log (this.datosArticulos);
     });
     
   }
