@@ -53,9 +53,10 @@
  <input type="file"
  id="file"
  #userPhoto
- (change)="onFileSelected($event)"
  name="image"
- accept=".png,.jpg"
+ accept="image/*"
+(change)="procesarFile(imageInput)"
+
  autocomplete="off"
  formControlName="imagen"
  />
