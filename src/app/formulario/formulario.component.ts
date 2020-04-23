@@ -51,7 +51,7 @@ export class FormularioComponent implements OnInit {
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],
-      
+      imagen: File [''],
 
       })
 
@@ -60,11 +60,11 @@ export class FormularioComponent implements OnInit {
 public procesarFile(e) {
     console.log (e)
     //this.image = imageInput;
-   /* const id = Math.random().toString(36).substring(2);
+    const id = Math.random().toString(36).substring(2);
     const file = e.target.files[0];
     const filePath = 'imagenes/imagen.png';
     const ref = this.storage.ref(filePath);
-    const task = this.storage.upload(filePath,file);*/
+    const task = this.storage.upload(filePath,file);
   }
 
  
@@ -72,7 +72,7 @@ public procesarFile(e) {
 
   onSubmit(instance){
  console.log(instance); // just to check if it worked 
- //instance.imagen = this.file;
+ instance.imagen = this.file;
 
  this.firebaseService.createUser(instance)
 	.then(

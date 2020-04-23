@@ -16,17 +16,16 @@ export class FirebaseService {
 constructor( private firestore: AngularFirestore  ) {}
 
 datosArticulo;
-avatarLink: string = "https://cdn.jsdelivr.net/gh/fbronchaly/angular-electricBlog@master/src/assets/img/batman.png";
 
 
 
-  createUser(value,avatarLink){
+  createUser(value){
   return this.firestore.collection('articulos').add({
   fecha: value.fecha,
   titular: value.titular,
   autor: value.autor,
   textoArticulo: value.textoArticulo,
-  imagen: avatarLink
+  imagen: value.imagen
 })
   };
 
