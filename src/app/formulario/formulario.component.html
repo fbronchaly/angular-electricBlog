@@ -52,13 +52,12 @@
   
  <input type="file"
  id="file"
- #userPhoto
  name="image"
  accept="image/*"
-(change)="procesarFile(imageInput)"
-
- autocomplete="off"
+(change)="procesarFile($event)"
  formControlName="imagen"
+ autocomplete="off"
+
  />
         
     </div>

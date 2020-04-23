@@ -21,8 +21,11 @@ export class FormularioComponent implements OnInit {
 
 
    formulario;
-    //private datos: ArticuloModel;  // Modelo
+
+  private datos: ArticuloModel;  // Modelo
+     
  dateId = new Date();
+ file: File;
 
 
    
@@ -54,14 +57,18 @@ export class FormularioComponent implements OnInit {
 
   }
 
-
+public procesarFile(e) {
+    console.log (e)
+    //this.image = imageInput;
+     this.file = e.target.files[0];
+  }
 
  
 
 
   onSubmit(instance){
- //console.log(instance); // just to check if it worked 
- 
+ console.log(instance); // just to check if it worked 
+ instance.imagen = this.file;
 
  this.firebaseService.createUser(instance)
 	.then(

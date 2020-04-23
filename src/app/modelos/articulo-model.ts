@@ -3,7 +3,7 @@ export interface ArticuloModel {
   titular: String;
   autor: String;
   textoArticulo: String;
-  imagen: File;
+  imagen: any;
 
 }
 
