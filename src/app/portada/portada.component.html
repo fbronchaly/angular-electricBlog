@@ -2,7 +2,7 @@
 <div class="card-columns" >
 
 <div class="card ajustes"  *ngFor="let articulo of datosArticulos" >
-  <img class="card-img-top img-fluid" src="{{pathReference}}" alt="">
+  <img class="card-img-top img-fluid" src="{{articulo.imagen}}" alt="">
   <div class="card-body">
     <h4 class="card-title">{{ articulo.titular }}</h4>
     <p class="card-text"> {{ articulo.textoArticulo }} </p>

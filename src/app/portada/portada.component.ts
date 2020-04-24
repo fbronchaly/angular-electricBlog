@@ -26,6 +26,7 @@ export class PortadaComponent implements OnInit {
 pathReference;
 url;
 val;
+display;
 
   constructor(
     private fs: FirebaseService,
@@ -53,27 +54,24 @@ val;
        
         };
          console.log (this.datosArticulos.length);
+         console.log (this.datosArticulos[0]);
        
       })
      
-    //this.pathReference = this.storage.ref('/fotosArticulos/img942766');
+// Adquisición de fotografias según articulo
+  for( let i=0; this.datosArticulos.length>i; i++ ){
 
-   // var gsRef = this.storage.refFromURL('gs://bucket/images/muimui.jpg');
-   /*    
-   const ref = this.storage.ref('fotosArticulos/img942766');
-   this.pathReference = ref.getDownloadURL();
-   //this.pathReference = this.storage.storage.refFromURL('gs://bucket/fotosArticulos/img103080.png');
-    console.log (this.pathReference)
-
-   */
-   this.url = this.storage.ref(`/fotosArticulos/img103080`).getDownloadURL()
+   this.url = this.storage.ref('/fotosArticulos/'+ this.datosArticulos[i].imagen).getDownloadURL()
    .subscribe(
      val => {
          console.log(val);
-         this.pathReference = val;
-
+         
+          this.datosArticulos[i].imagen = val;
+          setTimeout(()=>{ this.display = "" },1000)
+          this.pathReference = val;
+          
      });
-     
+  }  
      
     });
 
