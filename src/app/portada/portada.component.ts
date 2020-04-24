@@ -68,10 +68,11 @@ val;
    */
    this.url = this.storage.ref(`/fotosArticulos/img942766`).getDownloadURL()
    .subscribe(
-     val => 
-     console.log(val)
+     val => {
+         console.log(val);
+         this.pathReference = val;
 
-     );
+     });
      
      
     });
