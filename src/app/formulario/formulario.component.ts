@@ -10,6 +10,7 @@ import { ValidatorService } from '../validator.service';
 
 //Modelo
 import {ArticuloModel} from '../modelos/articulo-model';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 
 @Component({
@@ -34,7 +35,8 @@ export class FormularioComponent implements OnInit {
   constructor(
   private validator: ValidatorService,
   private fb:FormBuilder,
-  private firebaseService: FirebaseService
+  private firebaseService: FirebaseService,
+  private storage: AngularFireStorage
 ) {
       this.crearFormulario();
     }
@@ -60,11 +62,14 @@ export class FormularioComponent implements OnInit {
 public procesarFile(e) {
     console.log (e)
     //this.image = imageInput;
-    const id = Math.random().toString(36).substring(2);
-    const file = e.target.files[0];
+    /*const id = Math.random().toString(36).substring(2);
+    
     const filePath = 'imagenes/imagen.png';
     const ref = this.storage.ref(filePath);
-    const task = this.storage.upload(filePath,file);
+    const task = this.storage.upload(filePath,file);*/
+    const file = e.target.files[0];
+    return this.storage.upload('fotos', file);
+    console.log ('fotografia enviada');
   }
 
  
@@ -72,7 +77,7 @@ public procesarFile(e) {
 
   onSubmit(instance){
  console.log(instance); // just to check if it worked 
- instance.imagen = this.file;
+ //instance.imagen = this.file;
 
  this.firebaseService.createUser(instance)
 	.then(
