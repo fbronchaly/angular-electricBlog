@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 import { environment } from './environments/environment';
 import { APP_ROUTING } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -20,6 +21,7 @@ import { PortadaComponent } from './portada/portada.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticuloTarjetaComponent } from './articulo-tarjeta/articulo-tarjeta.component';
 import {NavbarComponent} from './shared/navbar/navbar.component';
+
 
 
 @NgModule({

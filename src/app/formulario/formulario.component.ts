@@ -26,8 +26,9 @@ export class FormularioComponent implements OnInit {
   private datos: ArticuloModel;  // Modelo
      
  dateId = new Date();
+ idKey = 'img' + Math.floor(Math.random() * 1000000);
  file: File;
-
+ selectedFiles;
 
    
 
@@ -53,31 +54,24 @@ export class FormularioComponent implements OnInit {
       titular: ['', [ Validators.required]],
       autor: ['', [Validators.required ]],
       textoArticulo: ['', [ Validators.required] ],
-      imagen: File [''],
+      imagen: this.idKey,
 
       })
 
   }
 
 public procesarFile(e) {
-    console.log (e)
-    //this.image = imageInput;
-    /*const id = Math.random().toString(36).substring(2);
-    
-    const filePath = 'imagenes/imagen.png';
-    const ref = this.storage.ref(filePath);
-    const task = this.storage.upload(filePath,file);*/
-    const file = e.target.files[0];
-    return this.storage.upload('fotos', file);
-    console.log ('fotografia enviada');
+    this.selectedFiles = e.target.files;
+     this.file = this.selectedFiles.item(0);
   }
 
- 
 
 
   onSubmit(instance){
  console.log(instance); // just to check if it worked 
- //instance.imagen = this.file;
+
+ const uploadTask = this.storage.upload('/fotosArticulos/' + this.idKey, this.file);
+    console.log ('Fotografía enviada')
 
  this.firebaseService.createUser(instance)
 	.then(

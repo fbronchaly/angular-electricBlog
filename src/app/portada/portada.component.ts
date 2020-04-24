@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
-//import { Router } from '@angular/router';
+import { AngularFireStorage } from '@angular/fire/storage';
+import firebase from 'firebase/firestore';
+
 
 
 import {ArticuloModel} from '../modelos/articulo-model';
+import { Observable } from 'rxjs';
+
 
 
 
@@ -16,10 +20,19 @@ import {ArticuloModel} from '../modelos/articulo-model';
 export class PortadaComponent implements OnInit {
 
  datosArticulos:ArticuloModel[]=[];
- 
+ imagen;
+ //pathReference: Observable<string | null>;
+ storageRef;
+pathReference;
+url;
+val;
 
+  constructor(
+    private fs: FirebaseService,
+   private storage: AngularFireStorage,
 
-  constructor(private fs: FirebaseService) { 
+  
+   ) { 
 
   }
 
@@ -39,15 +52,35 @@ export class PortadaComponent implements OnInit {
         imagen: e.payload.doc.data()['imagen'],
        
         };
-         
+         console.log (this.datosArticulos.length);
        
       })
-    console.log (this.datosArticulos.length);
+     
+    //this.pathReference = this.storage.ref('/fotosArticulos/img942766');
+
+   // var gsRef = this.storage.refFromURL('gs://bucket/images/muimui.jpg');
+   /*    
+   const ref = this.storage.ref('fotosArticulos/img942766');
+   this.pathReference = ref.getDownloadURL();
+   //this.pathReference = this.storage.storage.refFromURL('gs://bucket/fotosArticulos/img103080.png');
+    console.log (this.pathReference)
+
+   */
+   this.url = this.storage.ref(`/fotosArticulos/img942766`).getDownloadURL()
+   .subscribe(
+     val => 
+     console.log(val)
+
+     );
+     
+     
     });
+
+    
     
   }
 
 
   
 
-}
+  }
