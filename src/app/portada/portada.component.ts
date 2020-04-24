@@ -66,7 +66,7 @@ val;
     console.log (this.pathReference)
 
    */
-   this.url = this.storage.ref(`/fotosArticulos/img942766`).getDownloadURL()
+   this.url = this.storage.ref(`/fotosArticulos/img103080`).getDownloadURL()
    .subscribe(
      val => {
          console.log(val);
