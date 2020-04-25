@@ -1,11 +1,11 @@
-
+<div class = "container">
 <div class="card-columns" >
 
 <div class="card ajustes"  *ngFor="let articulo of datosArticulos" >
   <img class="card-img-top img-fluid" src="{{articulo.imagen}}" alt="">
   <div class="card-block">
     <h4 class="card-title">{{ articulo.titular }}</h4>
-    <p class="card-text ellipsis"> {{ articulo.textoArticulo }} </p>
+    <p class="card-text"> {{ articulo.textoArticulo }} </p>
     <p class="card-text"><small class="text-muted">{{ articulo.autor }}</small></p>
 
     <button 
@@ -15,6 +15,7 @@
     <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
 
   </div>
+</div>
 </div>
 </div>
 
