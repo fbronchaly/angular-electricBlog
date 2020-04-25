@@ -1,9 +1,8 @@
 .ancho{
-  margin:0px;
+ margin: 2% 0% 0% 0%;
 }
 
 .fondoImagen{
-
  background-image: url("https://cdn.jsdelivr.net/gh/fbronchaly/angular-electricBlog@master/src/assets/img/5-1500x430.jpg");
  background-color: #cccccc; 
 }

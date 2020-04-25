@@ -1,0 +1,11 @@
+.jumbotron { 
+     background-size: cover; 
+     padding-top: 5%; 
+     padding-bottom: 5%; 
+     padding-left: 5%; 
+     padding-right: 5%; 
+     color: #FFFFFF;
+
+     margin: 2% 0% 2% 0%;
+     background-color: #666666
+    }
