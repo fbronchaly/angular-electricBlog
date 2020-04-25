@@ -3,9 +3,20 @@
 margin: 10px  0px 10px 0px;
 }
 
+.letras{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-style: oblique;
+  font-weight: bold;
+
+}
+
 .card-img-top {
     width: 100%;
     height: 10vw;
     object-fit: cover;
 }
 
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}

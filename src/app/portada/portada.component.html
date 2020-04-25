@@ -2,10 +2,10 @@
 <div class="card-columns" >
 
 <div class="card ajustes"  *ngFor="let articulo of datosArticulos" >
-  <img class="card-img-top img-fluid aju" src="{{articulo.imagen}}" alt="">
+  <img class="card-img-top img-fluid ajustes" src="{{articulo.imagen}}" alt="">
   <div class="card-block">
-    <h4 class="card-title">{{ articulo.titular }}</h4>
-    <p class="card-text"> {{ articulo.textoArticulo }} </p>
+    <h4 class="card-title letras">{{ articulo.titular }}</h4>
+    <p class="card-text overflow-ellipsis"> {{ articulo.textoArticulo }} </p>
     <p class="card-text"><small class="text-muted">{{ articulo.autor }}</small></p>
 
     <button 
