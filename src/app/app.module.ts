@@ -21,6 +21,7 @@ import { PortadaComponent } from './portada/portada.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticuloTarjetaComponent } from './articulo-tarjeta/articulo-tarjeta.component';
 import {NavbarComponent} from './shared/navbar/navbar.component';
+import { CarruselComponent } from './carrusel/carrusel.component';
 
 
 
@@ -38,7 +39,7 @@ import {NavbarComponent} from './shared/navbar/navbar.component';
 
 
  	],
-  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent, NavbarComponent ],
+  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent, NavbarComponent, CarruselComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ValidatorService, FirebaseService]
 })
