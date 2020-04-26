@@ -2,20 +2,32 @@
 <div class="card-columns" >
 
 <div class="card ajustes"  *ngFor="let articulo of datosArticulos" >
-  <img class="card-img-top img-fluid ajustes" src="{{articulo.imagen}}" alt="">
-  <div class="card-block">
-    <h4 class="card-title letras">{{ articulo.titular }}</h4>
-    <p class="card-text overflow-ellipsis"> {{ articulo.textoArticulo }} </p>
-    <p class="card-text"><small class="text-muted">{{ articulo.autor }}</small></p>
+  <img class="card-img-top" src="{{articulo.imagen}}" alt="">
 
+  <div class="card-body">
+     
+
+    <h4 class="card-title letras">{{ articulo.titular }}</h4>
+       
+
+    <p class="card-text overflow-ellipsis"> {{ articulo.textoArticulo }} </p>
+    
+  </div>
+
+<div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+</div>
+
+  <div class="card">
     <button 
       type="button" class="btn btn-outline-primary btn-block">
       Ver más...
     </button>
-    <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
+ 
+  </div>
 
   </div>
 </div>
 </div>
-</div>
+
 

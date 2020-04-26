@@ -1,6 +1,6 @@
 .ajustes{
 
-margin: 10px  0px 10px 0px;
+margin: 20px  0px 10px 0px;
 }
 
 .letras{
@@ -8,7 +8,7 @@ margin: 10px  0px 10px 0px;
   font-size: 19px;
   font-style: oblique;
   font-weight: bold;
-
+  margin: 20px  0px 20px 0px;   
 }
 
 .card-img-top {
@@ -18,5 +18,28 @@ margin: 10px  0px 10px 0px;
 }
 
 .overflow-ellipsis {
-  text-overflow: ellipsis;
+ 
+      width: 230px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+}
+.avatar-image {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+.u-size36x36 {
+    width: 36px!important;
+    height: 36px!important;
+}
+img {
+    border: 0;
+}
+
+.u-flexCenter {
+  
+  justify-content: center;
+  align-items: center;
 }

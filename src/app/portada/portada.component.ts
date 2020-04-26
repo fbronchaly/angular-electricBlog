@@ -67,7 +67,7 @@ display;
          console.log(val);
          
           this.datosArticulos[i].imagen = val;
-          setTimeout(()=>{ this.display = "" },1000)
+          //setTimeout(()=>{ this.display = "" },1000)
           this.pathReference = val;
           
      });
