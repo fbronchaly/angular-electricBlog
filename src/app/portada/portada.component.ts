@@ -53,11 +53,12 @@ display;
         imagen: e.payload.doc.data()['imagen'],
        
         };
-         console.log (this.datosArticulos.length);
-         console.log (this.datosArticulos[0]);
+        
+         console.log (this.datosArticulos[0].fecha);
        
       })
-     
+      console.log (this.datosArticulos.length);
+      console.log (this.datosArticulos[0].fecha);
 // Adquisición de fotografias según articulo
   for( let i=0; this.datosArticulos.length>i; i++ ){
 

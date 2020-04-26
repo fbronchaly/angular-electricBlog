@@ -43,3 +43,21 @@ img {
   justify-content: center;
   align-items: center;
 }
+.user-detail {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.user-detail .details {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.item1 {
+  grid-row: 1 / span 2;
+}

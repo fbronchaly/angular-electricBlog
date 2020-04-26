@@ -15,19 +15,33 @@
   </div>
 
 <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+<div class="user-detail right">
+
+  <div class="user-detail__avatar-circle">
+    <i class="material-icons user-detail__avatar">account_circle</i>
+  </div>
+  
+  <div class="details">
+    <span class="user-detail__username">
+            Adminstrator
+        </span>
+    <span class="user-detail__fecha"><small>{{ articulo.fecha *1000 | date: 'MMMM, d'  }}</small> </span>
+  </div>
+
+ </div> 
 </div>
+
 
   <div class="card">
     <button 
       type="button" class="btn btn-outline-primary btn-block">
       Ver más...
     </button>
- 
+    <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
   </div>
 
   </div>
 </div>
-</div>
+
 
 
