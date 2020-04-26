@@ -61,3 +61,13 @@ img {
 .item1 {
   grid-row: 1 / span 2;
 }
+.avatar-image{
+  margin: 0px 40px 0px 0px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
