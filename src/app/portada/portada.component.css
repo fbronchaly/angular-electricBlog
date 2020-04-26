@@ -61,6 +61,9 @@ img {
 .item1 {
   grid-row: 1 / span 2;
 }
+.item2 {
+  grid-row: 1 / span 2;
+}
 .avatar-image{
   margin: 0px 40px 0px 0px;
 }
