@@ -8,11 +8,11 @@
       <h5 class="card-title">{{ articulo.titular }}</h5>
       <p class="card-text"> {{ (articulo.textoArticulo.length>130)? (articulo.textoArticulo | slice:0:130)+'..':(articulo.textoArticulo) }}</p>
       <div class="row text-left">
-        <div class="col mb-4 ">
-      <p class="card-text "><img src="avatar.png" alt="Avatar" class="avatar"></p>
+        <div class="col w-20 ">
+      <p class="card-text "><img src="https://stackblitz.com/files/angular-ccyste2/github/fbronchaly/angular-electricBlog/master/src/assets/img/0_w8TA5ScSiVNWMJrQ_.jpg" alt="Avatar" class="avatar"></p>
         </div>
-        <div class="col mb-8">
-           <p class="card-link "><a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7"></a><b>Francisco J.Capelo</b></p>
+        <div class="col w-50 ">
+           <p class="card-text"><a class="nav-link active " href="#">Francisco J. Capelo</a></p>
           </div>
       </div>
     <p class="card-text"><small class="text-muted">{{ articulo.fecha *1000 | date: 'MMMM, d'  }}</small></p>
