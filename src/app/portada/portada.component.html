@@ -7,8 +7,14 @@
       <div class="card-body ">
       <h5 class="card-title">{{ articulo.titular }}</h5>
       <p class="card-text"> {{ (articulo.textoArticulo.length>130)? (articulo.textoArticulo | slice:0:130)+'..':(articulo.textoArticulo) }}</p>
-      <p class="card-link"><a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7"></a><b>Francisco J.Capelo</b></p>
-      
+      <div class="row text-left">
+        <div class="col mb-4 ">
+      <p class="card-text "><img src="avatar.png" alt="Avatar" class="avatar"></p>
+        </div>
+        <div class="col mb-8">
+           <p class="card-link "><a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7"></a><b>Francisco J.Capelo</b></p>
+          </div>
+      </div>
     <p class="card-text"><small class="text-muted">{{ articulo.fecha *1000 | date: 'MMMM, d'  }}</small></p>
     <a href="#" class="btn btn-primary">Ver más..</a>
     </div>
