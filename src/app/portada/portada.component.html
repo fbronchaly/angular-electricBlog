@@ -1,15 +1,18 @@
   
   
-  <div class="card text-center colum" *ngFor="let articulo of datosArticulos" >
-    <div class="card-body">
+<div class="row row-cols-1 row-cols-md-3" >
+  <div class="col mb-4 " *ngFor="let articulo of datosArticulos"> 
+    <div class="card h-100" > 
       <img class="card-img-top" src="{{articulo.imagen}}" alt="">
+      <div class="card-body ">
       <h5 class="card-title">{{ articulo.titular }}</h5>
       <p class="card-text">{{ articulo.textoArticulo }}</p>
-      <p class="card-text"><a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7" data-action="show-user-card" data-action-value="a1fba6cea10f" data-action-type="hover" data-user-id="a1fba6cea10f" data-collection-slug="angular-blog" dir="auto" >Francisco J.Capelo</a>
+      <p class="card-link"><a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7" data-action="show-user-card" data-action-value="a1fba6cea10f" data-action-type="hover" data-user-id="a1fba6cea10f" data-collection-slug="angular-blog" dir="auto" >Francisco J.Capelo</a>
       
     <span class="user-detail__fecha"><small>{{ articulo.fecha *1000 | date: 'MMMM, d'  }}</small> </span>
 </p>
     </div>
+  </div>
   </div>
 
 
