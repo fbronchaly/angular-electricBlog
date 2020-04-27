@@ -1,47 +1,16 @@
-<div class = "container">
-<div class="card-columns" >
-
-<div class="card ajustes"  *ngFor="let articulo of datosArticulos" >
-  <img class="card-img-top" src="{{articulo.imagen}}" alt="">
-
-  <div class="card-body">
-     
-
-    <h4 class="card-title letras">{{ articulo.titular }}</h4>
-       
-
-    <p class="card-text overflow-ellipsis"> {{ articulo.textoArticulo }} </p>
-    
-  </div>
-
-<div class="card-footer">
-<div class="user-detail right">
-
-  <div class="user-detail avatar-image ">
-    <img src="https://cdn.jsdelivr.net/gh/fbronchaly/angular-electricBlog@master/src/assets/img/francisco.jpg" alt="Avatar" class="avatar">
-  </div>
   
-  <div class="details">
-   
-           <a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7" data-action="show-user-card" data-action-value="a1fba6cea10f" data-action-type="hover" data-user-id="a1fba6cea10f" data-collection-slug="angular-blog" dir="auto" >Francisco J.Capelo</a>
+  
+  <div class="card text-center colum" *ngFor="let articulo of datosArticulos" >
+    <div class="card-body">
+      <img class="card-img-top" src="{{articulo.imagen}}" alt="">
+      <h5 class="card-title">{{ articulo.titular }}</h5>
+      <p class="card-text">{{ articulo.textoArticulo }}</p>
+      <p class="card-text"><a href="https://es.linkedin.com/in/francisco-capelo-campillo-567793b7" data-action="show-user-card" data-action-value="a1fba6cea10f" data-action-type="hover" data-user-id="a1fba6cea10f" data-collection-slug="angular-blog" dir="auto" >Francisco J.Capelo</a>
       
     <span class="user-detail__fecha"><small>{{ articulo.fecha *1000 | date: 'MMMM, d'  }}</small> </span>
+</p>
+    </div>
   </div>
-
- </div> 
-</div>
-
-
-  <div class="card">
-    <button 
-      type="button" class="btn btn-outline-primary btn-block">
-      Ver más...
-    </button>
-    <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
-  </div>
-
-  </div>
-</div>
 
 
 
