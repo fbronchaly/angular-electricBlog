@@ -1,1 +1,27 @@
-<p> Hello </p>
+
+
+ <div class="contaniner">
+  <div class="body-tarjeta">
+    <h5 class="title-tarjeta">{{parametros.titular}}</h5>
+
+    <p class="card-text "><img src="https://stackblitz.com/files/angular-ccyste2/github/fbronchaly/angular-electricBlog/master/src/assets/img/0_w8TA5ScSiVNWMJrQ_.jpg" alt="Avatar" class="avatar"></p>
+  
+  <div class="profile-name">
+    <h4>Quincy Larson</h4>
+    <p class="card-text "><small class="text-muted">{{ parametros.fecha *1000 | date: 'MMMM, d'  }}</small></p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+  <div class="follow-btn">
+    <button>Follow</button>
+  </div>
+  <div class="redes-sociales">
+   
+  </div>
+
+    <p class="text-tarjeta">{{parametros.textoArticulo}}</p>
+   <img class="card-img-top" src="{{parametros.imagen}}" alt="imagen del articulo">
+
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+  
+</div>

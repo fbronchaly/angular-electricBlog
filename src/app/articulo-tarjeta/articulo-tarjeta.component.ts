@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-articulo-tarjeta',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticuloTarjetaComponent implements OnInit {
 
-  constructor() { }
+  
+
+parametros:any = {};
+
+  constructor(private route: ActivatedRoute) {
+   route.params.subscribe(params => {
+     this.parametros = params;
+       return this.parametros;
+     //console.log (course.name);
+    });
+  }
 
   ngOnInit() {
   }
