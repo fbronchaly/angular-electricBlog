@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
 import { AngularFireStorage } from '@angular/fire/storage';
 import firebase from 'firebase/firestore';
@@ -7,6 +7,7 @@ import firebase from 'firebase/firestore';
 
 import {ArticuloModel} from '../modelos/articulo-model';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 
@@ -19,23 +20,23 @@ import { Observable } from 'rxjs';
 })
 export class PortadaComponent implements OnInit {
 
- datosArticulos:ArticuloModel[]=[];
- imagen;
- //pathReference: Observable<string | null>;
- storageRef;
+
+datosArticulos:ArticuloModel[]=[];
+imagen; 
+storageRef;
 pathReference;
 url;
 val;
 display;
+articulo;
+index;
+articuloSeleccionado: EventEmitter<number>;
 
   constructor(
     private fs: FirebaseService,
    private storage: AngularFireStorage,
-
-  
-   ) { 
-
-  }
+   private router: Router
+ ) {this.articuloSeleccionado = new EventEmitter();}
 
   ngOnInit() {
 
@@ -58,7 +59,9 @@ display;
        
       })
       console.log (this.datosArticulos.length);
-      console.log (this.datosArticulos[0].fecha);
+      //console.log (this.datosArticulos[0]);
+       console.log (event);
+
 // Adquisición de fotografias según articulo
   for( let i=0; this.datosArticulos.length>i; i++ ){
 
@@ -76,11 +79,17 @@ display;
      
     });
 
-    
+  
     
   }
 
-
+  verArticulo(i){
+    let articuloElegido = this.datosArticulos[i];
+    console.log(articuloElegido);
+   
+     
+    this.router.navigate(['/articulo-tarjeta', articuloElegido]);
+  };
   
-
+ 
   }
