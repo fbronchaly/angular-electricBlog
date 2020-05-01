@@ -1,6 +1,10 @@
 .container{
   display: flex;
 }
+header, footer {
+    display: flex;
+    flex-direction: row;
+  }
 
 .body-tarjeta{
 display: flex;
@@ -10,4 +14,30 @@ flex-direction: column;
 .img {
   max-width: 100%;
   height: auto;
+  display: flex;
+  align-items: stretch;
 }
+
+.title-tarjeta{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+ header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  header .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+  header .follow-btn {
+    display: flex;
+    margin: 0 0 0 auto;
+  }

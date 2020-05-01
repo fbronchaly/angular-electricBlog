@@ -32,6 +32,8 @@ articulo;
 index;
 articuloSeleccionado: EventEmitter<number>;
 
+titular: String;
+
   constructor(
     private fs: FirebaseService,
    private storage: AngularFireStorage,
@@ -40,6 +42,8 @@ articuloSeleccionado: EventEmitter<number>;
 
   ngOnInit() {
 
+   
+
     this.fs.leeArticulos().subscribe(data => {
  
       this.datosArticulos = data.map(e => {
@@ -47,10 +51,17 @@ articuloSeleccionado: EventEmitter<number>;
         const data = e.payload.doc.data() as ArticuloModel
       return {
         id: e.payload.doc.id,
-        fecha :e.payload.doc.data()['fecha'],
-        titular: e.payload.doc.data()['titular'],
+        fecha:e.payload.doc.data()['fecha'],
+        titular:e.payload.doc.data()['titular'],
         autor: e.payload.doc.data()['autor'],
-        textoArticulo:e.payload.doc.data()['textoArticulo'],
+        tituloArticulo1:e.payload.doc.data()['textoArticulo1'],
+        tituloArticulo2:e.payload.doc.data()['textoArticulo1'],
+        tituloArticulo3:e.payload.doc.data()['textoArticulo1'],
+        tituloArticulo4:e.payload.doc.data()['textoArticulo1'],
+        textoArticulo1:e.payload.doc.data()['textoArticulo1'],
+        textoArticulo2:e.payload.doc.data()['textoArticulo2'],
+        textoArticulo3:e.payload.doc.data()['textoArticulo3'],
+        textoArticulo4:e.payload.doc.data()['textoArticulo4'],
         imagen: e.payload.doc.data()['imagen'],
        
         };
