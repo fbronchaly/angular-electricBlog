@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormularioComponent} from './formulario/formulario.component';
+
 
 @Component({
   selector: 'my-app',
@@ -7,5 +7,5 @@ import {FormularioComponent} from './formulario/formulario.component';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  
 }

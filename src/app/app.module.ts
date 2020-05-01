@@ -12,9 +12,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormularioComponent } from './formulario/formulario.component';
+
 import { ValidatorService } from './validator.service';
-import { HomeComponent } from './home/home.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FirebaseService } from './firebase.service';
 import { PortadaComponent } from './portada/portada.component';
@@ -39,7 +38,7 @@ import { CarruselComponent } from './carrusel/carrusel.component';
 
 
  	],
-  declarations: [ AppComponent, HelloComponent, FormularioComponent, HomeComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent, NavbarComponent, CarruselComponent ],
+  declarations: [ AppComponent, HelloComponent, CabeceraComponent, PortadaComponent, ArticuloTarjetaComponent, NavbarComponent, CarruselComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ValidatorService, FirebaseService]
 })
