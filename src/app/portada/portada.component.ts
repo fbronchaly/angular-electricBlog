@@ -42,12 +42,9 @@ titular: String;
 
   ngOnInit() {
 
-   
-
     this.fs.leeArticulos().subscribe(data => {
  
       this.datosArticulos = data.map(e => {
-
         const data = e.payload.doc.data() as ArticuloModel
       return {
         id: e.payload.doc.id,
@@ -55,9 +52,9 @@ titular: String;
         titular:e.payload.doc.data()['titular'],
         autor: e.payload.doc.data()['autor'],
         tituloArticulo1:e.payload.doc.data()['textoArticulo1'],
-        tituloArticulo2:e.payload.doc.data()['textoArticulo1'],
-        tituloArticulo3:e.payload.doc.data()['textoArticulo1'],
-        tituloArticulo4:e.payload.doc.data()['textoArticulo1'],
+        tituloArticulo2:e.payload.doc.data()['textoArticulo2'],
+        tituloArticulo3:e.payload.doc.data()['textoArticulo3'],
+        tituloArticulo4:e.payload.doc.data()['textoArticulo4'],
         textoArticulo1:e.payload.doc.data()['textoArticulo1'],
         textoArticulo2:e.payload.doc.data()['textoArticulo2'],
         textoArticulo3:e.payload.doc.data()['textoArticulo3'],

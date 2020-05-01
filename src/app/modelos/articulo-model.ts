@@ -1,5 +1,5 @@
 export interface ArticuloModel {
-  fecha: any;
+  fecha: Date;
   titular: String;
   autor: String;
   tituloArticulo1: String;
