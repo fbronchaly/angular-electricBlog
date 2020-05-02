@@ -72,9 +72,9 @@ titular: String;
 
 
 
-     // for( let i=0; this.datosArticulos.length>i; i++ ){
-      //console.log('Despues del for' + this.datosArticulos[i].imagen);
-      //setTimeout(()=>{ this.display = "" },5000)
+      for( let i=0; this.datosArticulos.length>i; i++ ){
+      console.log('Despues del for' + this.datosArticulos[i].imagen);
+    
       this.url = this.storage.ref('/fotosArticulos/'+ this.datosArticulos[0].imagen).getDownloadURL()
       .subscribe(
        val => {
@@ -85,9 +85,8 @@ titular: String;
          // this.pathReference = val;
           
      });
-  }  
-     
-   // }
+  }    
+    }
     );
 
   
