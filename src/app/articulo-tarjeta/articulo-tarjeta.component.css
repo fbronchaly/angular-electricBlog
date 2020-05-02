@@ -1,5 +1,10 @@
 .container{
   display: flex;
+
+}
+.container-in{
+  display: flex;
+  flex-direction: column;
 }
 header, footer {
     display: flex;
