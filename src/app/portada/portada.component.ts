@@ -63,29 +63,32 @@ titular: String;
        
         };
         
-         console.log (this.datosArticulos[0].fecha);
+        
        
       })
-      console.log (this.datosArticulos.length);
-      //console.log (this.datosArticulos[0]);
-       console.log (event);
+      console.log (this.datosArticulos[0].fecha);
+      //console.log (this.datosArticulos.length);
+      console.log (this.datosArticulos[0]);
 
-// Adquisición de fotografias según articulo
-  for( let i=0; this.datosArticulos.length>i; i++ ){
 
-   this.url = this.storage.ref('/fotosArticulos/'+ this.datosArticulos[i].imagen).getDownloadURL()
-   .subscribe(
-     val => {
-         console.log(val);
+
+     // for( let i=0; this.datosArticulos.length>i; i++ ){
+      //console.log('Despues del for' + this.datosArticulos[i].imagen);
+      //setTimeout(()=>{ this.display = "" },5000)
+      this.url = this.storage.ref('/fotosArticulos/'+ this.datosArticulos[0].imagen).getDownloadURL()
+      .subscribe(
+       val => {
+         console.log('Valor' + val);
          
           this.datosArticulos[i].imagen = val;
           //setTimeout(()=>{ this.display = "" },1000)
-          this.pathReference = val;
+         // this.pathReference = val;
           
      });
   }  
      
-    });
+   // }
+    );
 
   
     
