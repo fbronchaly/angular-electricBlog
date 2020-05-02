@@ -51,10 +51,10 @@ titular: String;
         fecha:e.payload.doc.data()['fecha'],
         titular:e.payload.doc.data()['titular'],
         autor: e.payload.doc.data()['autor'],
-        tituloArticulo1:e.payload.doc.data()['textoArticulo1'],
-        tituloArticulo2:e.payload.doc.data()['textoArticulo2'],
-        tituloArticulo3:e.payload.doc.data()['textoArticulo3'],
-        tituloArticulo4:e.payload.doc.data()['textoArticulo4'],
+        tituloArticulo1:e.payload.doc.data()['tituloArticulo1'],
+        tituloArticulo2:e.payload.doc.data()['tituloArticulo2'],
+        tituloArticulo3:e.payload.doc.data()['tituloArticulo3'],
+        tituloArticulo4:e.payload.doc.data()['tituloArticulo4'],
         textoArticulo1:e.payload.doc.data()['textoArticulo1'],
         textoArticulo2:e.payload.doc.data()['textoArticulo2'],
         textoArticulo3:e.payload.doc.data()['textoArticulo3'],
@@ -95,7 +95,7 @@ titular: String;
 
   verArticulo(i){
     let articuloElegido = this.datosArticulos[i];
-    console.log(articuloElegido);
+    console.log("articuloElegido" + articuloElegido);
    
      
     this.router.navigate(['/articulo-tarjeta', articuloElegido]);

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {ArticuloModel} from '../modelos/articulo-model';
 
 @Component({
   selector: 'app-articulo-tarjeta',
@@ -10,13 +11,14 @@ export class ArticuloTarjetaComponent implements OnInit {
 
   
 
-parametros:any = {};
+parametros:ArticuloModel[] = [];
 
   constructor(private route: ActivatedRoute) {
    route.params.subscribe(params => {
      this.parametros = params;
+     console.log (this.parametros);
        return this.parametros;
-     //console.log (course.name);
+    
     });
   }
 
